@@ -32,7 +32,11 @@ public class Stack<Item> implements Iterable<Item> {
         N--;
         return  top;
     }
-
+    public Item peak() {
+        if (isEmpty())
+            return null;
+        return first.item;
+    }
     @Override
     public Iterator<Item> iterator() {
         return new ReverseArrayIterator();
